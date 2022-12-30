@@ -7,7 +7,7 @@ const router = require("./routes/routes.js")
 
 dotenv.config();
 const app = express()
-app.use(cors());
+app.use(cors({ origin:["http://localhost:3000/","https://to-do-frontend.onrender.com"]}));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
